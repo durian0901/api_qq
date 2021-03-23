@@ -1,3 +1,4 @@
+//migrations給資料庫看得
 export async function up(queryInterface,Sequelize){
     await queryInterface.createTable('users',{
         id:{
@@ -14,12 +15,12 @@ export async function up(queryInterface,Sequelize){
         email_verified:{
             type:Sequelize.STRING
         },
-        createTable:{  //時間戳記:知道帳號何時建立
+        createdAt:{  //時間戳記:知道帳號何時建立
             type:Sequelize.DATE,
             allowNull: false,
 
         },
-        updataAt:{  //時間戳記:更新密碼
+        updatedAt:{  //時間戳記:更新密碼
             type:Sequelize.DATE,
             allowNull:false,
         }
